@@ -6,157 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <LinearLayout
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
+        android:orientation="vertical">
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints">
+            android:text="Full Name"
+            android:textStyle="bold"
+            android:textSize="10pt"/>
+        <EditText
+            android:id="@+id/text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Please enter full name" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Row"
-                android:textSize="10pt" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gross Salary"
+            android:textStyle="bold"
+            android:textSize="10pt"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+        <EditText
+            android:id="@+id/text_salary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Please enter gross salary" />
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Calculate"/>
 
-                <ImageView
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"
-                    android:background="#ff5252" />
+        <ListView
+            android:id="@+id/list_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-                <ImageView
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"
-                    android:background="#ffff00" />
-
-                <ImageView
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"
-                    android:background="#69f0ae" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Column"
-                android:textSize="10pt" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"
-                    android:background="#ff5252" />
-
-                <ImageView
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"
-                    android:background="#ffff00" />
-
-                <ImageView
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"
-                    android:background="#69f0ae" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="ListView"
-                android:textSize="10pt" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="176.5pt"
-                    android:layout_height="50pt"
-                    android:background="#ff5252" />
-
-                <ImageView
-                    android:layout_width="176.5pt"
-                    android:layout_height="50pt"
-                    android:background="#ffff00" />
-
-                <ImageView
-                    android:layout_width="176.5pt"
-                    android:layout_height="25pt"
-                    android:background="#69f0ae" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="GridView"
-                android:textSize="10pt" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:columnCount="2"
-                    android:rowCount="2">
-
-                    <ImageView
-                        android:layout_width="75pt"
-                        android:layout_height="75pt"
-                        android:layout_marginLeft="10pt"
-                        android:layout_marginTop="10pt"
-                        android:layout_marginRight="5pt"
-                        android:background="#b2dfdb">
-                    </ImageView>
-
-                    <ImageView
-                        android:layout_width="75pt"
-                        android:layout_height="75pt"
-                        android:layout_marginTop="10pt"
-                        android:layout_marginRight="5pt"
-                        android:background="#80cbc4" />
-
-                    <ImageView
-                        android:layout_width="75pt"
-                        android:layout_height="75pt"
-                        android:layout_marginLeft="10pt"
-                        android:layout_marginTop="5pt"
-                        android:layout_marginRight="5pt"
-                        android:background="#4db6ac" />
-
-                    <ImageView
-                        android:layout_width="75pt"
-                        android:layout_height="75pt"
-                        android:layout_marginTop="5pt"
-                        android:layout_marginRight="5pt"
-                        android:background="#26a69a" />
-                </GridLayout>
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
-
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

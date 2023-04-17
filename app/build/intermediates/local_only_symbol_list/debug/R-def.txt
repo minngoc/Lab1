@@ -9,10 +9,14 @@ color teal_700
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id calculate_button
+id list_result
+id text_name
+id text_salary
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
-style Theme.Lab1
+style Theme.Lab2
 xml backup_rules
 xml data_extraction_rules

@@ -1,4 +1,4 @@
-com.example.lab1
+com.example.lab2
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -2903,6 +2903,7 @@ id bounceEnd
 id bounceStart
 id buttonPanel
 id cache_measures
+id calculate_button
 id callMeasure
 id cancel_button
 id carryVelocity
@@ -3040,6 +3041,7 @@ id line3
 id linear
 id listMode
 id list_item
+id list_result
 id m3_side_sheet
 id marquee
 id masked
@@ -3250,6 +3252,8 @@ id textTop
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_name
+id text_salary
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -4173,7 +4177,7 @@ style Theme_Design_Light
 style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
-style Theme_Lab1
+style Theme_Lab2
 style Theme_Material3_Dark
 style Theme_Material3_Dark_BottomSheetDialog
 style Theme_Material3_Dark_Dialog

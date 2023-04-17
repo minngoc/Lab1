@@ -5,43 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <ScrollView
+
+    <LinearLayout
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-        <LinearLayout
+        android:orientation="vertical">
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints">
+            android:text="Full Name"
+            android:textStyle="bold"
+            android:textSize="10pt"/>
+        <EditText
+            android:id="@+id/text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Please enter full name" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Row"
-                android:textSize="10pt" />
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <ImageView
-                    android:gravity="center_horizontal"
-                    android:background="#ff5252"
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"/>
-                <ImageView
-                    android:gravity="center_horizontal"
-                    android:background="#ffff00"
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"/>
-                <ImageView
-                    android:background="#69f0ae"
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"/>
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gross Salary"
+            android:textStyle="bold"
+            android:textSize="10pt"/>
 
+        <EditText
+            android:id="@+id/text_salary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Please enter gross salary" />
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Calculate"/>
+
+        <ListView
+            android:id="@+id/list_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,157 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textViewWellcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="258dp"
+        android:text="Wellcome to Home Page"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints">
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginBottom="317dp"
+        android:text="log out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Row"
-                android:textSize="10pt" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"
-                    android:background="#ff5252" />
-
-                <ImageView
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"
-                    android:background="#ffff00" />
-
-                <ImageView
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"
-                    android:background="#69f0ae" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Column"
-                android:textSize="10pt" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"
-                    android:background="#ff5252" />
-
-                <ImageView
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"
-                    android:background="#ffff00" />
-
-                <ImageView
-                    android:layout_width="50pt"
-                    android:layout_height="50pt"
-                    android:background="#69f0ae" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="ListView"
-                android:textSize="10pt" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="176.5pt"
-                    android:layout_height="50pt"
-                    android:background="#ff5252" />
-
-                <ImageView
-                    android:layout_width="176.5pt"
-                    android:layout_height="50pt"
-                    android:background="#ffff00" />
-
-                <ImageView
-                    android:layout_width="176.5pt"
-                    android:layout_height="25pt"
-                    android:background="#69f0ae" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="GridView"
-                android:textSize="10pt" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:columnCount="2"
-                    android:rowCount="2">
-
-                    <ImageView
-                        android:layout_width="75pt"
-                        android:layout_height="75pt"
-                        android:layout_marginLeft="10pt"
-                        android:layout_marginTop="10pt"
-                        android:layout_marginRight="5pt"
-                        android:background="#b2dfdb">
-                    </ImageView>
-
-                    <ImageView
-                        android:layout_width="75pt"
-                        android:layout_height="75pt"
-                        android:layout_marginTop="10pt"
-                        android:layout_marginRight="5pt"
-                        android:background="#80cbc4" />
-
-                    <ImageView
-                        android:layout_width="75pt"
-                        android:layout_height="75pt"
-                        android:layout_marginLeft="10pt"
-                        android:layout_marginTop="5pt"
-                        android:layout_marginRight="5pt"
-                        android:background="#4db6ac" />
-
-                    <ImageView
-                        android:layout_width="75pt"
-                        android:layout_height="75pt"
-                        android:layout_marginTop="5pt"
-                        android:layout_marginRight="5pt"
-                        android:background="#26a69a" />
-                </GridLayout>
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,16 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim anim_blink
+anim anim_bounce
+anim anim_combine
+anim anim_fade_in
+anim anim_fade_out
+anim anim_move
+anim anim_rotate
+anim anim_slide_up
+anim anim_zoom_in
+anim anim_zoom_out
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -118,6 +128,7 @@ attr alertDialogButtonGroupStyle
 attr alertDialogCenterButtons
 attr alertDialogStyle
 attr alertDialogTheme
+attr alignmentMode
 attr allowStacking
 attr alpha
 attr alphabeticModifiers
@@ -343,6 +354,8 @@ attr colorSurfaceVariant
 attr colorSwitchThumbNormal
 attr colorTertiary
 attr colorTertiaryContainer
+attr columnCount
+attr columnOrderPreserved
 attr commitIcon
 attr compatShadowEnabled
 attr constraintRotate
@@ -662,6 +675,9 @@ attr layout_anchorGravity
 attr layout_behavior
 attr layout_collapseMode
 attr layout_collapseParallaxMultiplier
+attr layout_column
+attr layout_columnSpan
+attr layout_columnWeight
 attr layout_constrainedHeight
 attr layout_constrainedWidth
 attr layout_constraintBaseline_creator
@@ -718,10 +734,14 @@ attr layout_goneMarginLeft
 attr layout_goneMarginRight
 attr layout_goneMarginStart
 attr layout_goneMarginTop
+attr layout_gravity
 attr layout_insetEdge
 attr layout_keyline
 attr layout_marginBaseline
 attr layout_optimizationLevel
+attr layout_row
+attr layout_rowSpan
+attr layout_rowWeight
 attr layout_scrollEffect
 attr layout_scrollFlags
 attr layout_scrollInterpolator
@@ -891,6 +911,7 @@ attr onPositiveCross
 attr onShow
 attr onStateTransition
 attr onTouchUp
+attr orientation
 attr overlapAnchor
 attr overlay
 attr paddingBottomNoButtons
@@ -959,6 +980,8 @@ attr rippleColor
 attr rotationCenterId
 attr round
 attr roundPercent
+attr rowCount
+attr rowOrderPreserved
 attr saturation
 attr scaleFromTextSize
 attr scrimAnimationDuration
@@ -1236,6 +1259,7 @@ attr triggerSlack
 attr ttcIndex
 attr upDuration
 attr useCompatPadding
+attr useDefaultMargins
 attr useDrawerArrowDrawable
 attr useMaterialThemeColors
 attr values
@@ -2009,6 +2033,7 @@ dimen compat_control_corner_material
 dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
 dimen def_drawer_elevation
+dimen default_gap
 dimen design_appbar_elevation
 dimen design_bottom_navigation_active_item_max_width
 dimen design_bottom_navigation_active_item_min_width
@@ -2069,6 +2094,7 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
+dimen image_base
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
@@ -2366,6 +2392,8 @@ dimen m3_sys_state_pressed_state_layer_opacity
 dimen m3_timepicker_display_stroke_width
 dimen m3_timepicker_window_elevation
 dimen m3_toolbar_text_size_title
+dimen margin_base
+dimen margin_basex2
 dimen material_bottom_sheet_max_width
 dimen material_clock_display_height
 dimen material_clock_display_padding
@@ -2613,6 +2641,7 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen text_medium
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -2729,6 +2758,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
+drawable logo
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -2875,6 +2905,8 @@ id actions
 id activity_chooser_view_content
 id add
 id alertTitle
+id alignBounds
+id alignMargins
 id aligned
 id all
 id allStates
@@ -2901,6 +2933,26 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn_blink_code
+id btn_blink_xml
+id btn_bounce_code
+id btn_bounce_xml
+id btn_combine_code
+id btn_combine_xml
+id btn_fade_in_code
+id btn_fade_in_xml
+id btn_fade_out_code
+id btn_fade_out_xml
+id btn_move_code
+id btn_move_xml
+id btn_rotate_code
+id btn_rotate_xml
+id btn_slide_up_code
+id btn_slide_up_xml
+id btn_zoom_in_code
+id btn_zoom_in_xml
+id btn_zoom_out_code
+id btn_zoom_out_xml
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3013,6 +3065,7 @@ id hideable
 id home
 id homeAsUp
 id honorRequest
+id horizontal
 id horizontal_only
 id icon
 id icon_group
@@ -3028,6 +3081,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id iv_uit_logo
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3277,6 +3331,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id vertical
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3512,21 +3567,28 @@ string abc_toolbar_collapse_description
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string blink
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
+string bounce
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string combine
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fade_in
+string fade_out
+string from_code
+string from_xml
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -3563,6 +3625,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string move
 string mtrl_badge_numberless_content_description
 string mtrl_checkbox_button_icon_path_checked
 string mtrl_checkbox_button_icon_path_group_name
@@ -3630,13 +3693,17 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string rotate
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
+string slide_up
 string status_bar_notification_info_overflow
+string zoom_in
+string zoom_out
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -4173,7 +4240,7 @@ style Theme_Design_Light
 style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
-style Theme_Lab1
+style Theme_Lab5
 style Theme_Material3_Dark
 style Theme_Material3_Dark_BottomSheetDialog
 style Theme_Material3_Dark_Dialog
@@ -4792,6 +4859,8 @@ styleable Fragment android_name android_id android_tag
 styleable FragmentContainerView android_name android_tag
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
+styleable GridLayout alignmentMode columnCount columnOrderPreserved orientation rowCount rowOrderPreserved useDefaultMargins
+styleable GridLayout_Layout android_layout_width android_layout_height android_layout_margin android_layout_marginLeft android_layout_marginTop android_layout_marginRight android_layout_marginBottom layout_column layout_columnSpan layout_columnWeight layout_gravity layout_row layout_rowSpan layout_rowWeight
 styleable ImageFilterView altSrc blendSrc brightness contrast crossfade imagePanX imagePanY imageRotate imageZoom overlay round roundPercent saturation warmth
 styleable Insets marginLeftSystemWindowInsets marginRightSystemWindowInsets marginTopSystemWindowInsets paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets paddingRightSystemWindowInsets paddingTopSystemWindowInsets
 styleable KeyAttribute android_alpha android_transformPivotX android_transformPivotY android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation curveFit framePosition motionProgress motionTarget transformPivotTarget transitionEasing transitionPathRotate
